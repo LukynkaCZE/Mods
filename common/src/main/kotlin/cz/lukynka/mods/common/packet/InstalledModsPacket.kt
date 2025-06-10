@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation
 
 class InstalledModsPacket(val mods: List<LukynkaMod>) : CustomPacketPayload {
     companion object {
-        val TYPE: CustomPacketPayload.Type<InstalledModsPacket> = CustomPacketPayload.Type<InstalledModsPacket>(ResourceLocation.fromNamespaceAndPath("debugrender", "add"))
+        val TYPE: CustomPacketPayload.Type<InstalledModsPacket> = CustomPacketPayload.Type<InstalledModsPacket>(ResourceLocation.fromNamespaceAndPath("lukynka", "installed_mods"))
 
         val STREAM_CODEC = StreamCodec.composite(
             LukynkaMod.STREAM_CODEC.apply(ByteBufCodecs.list()), InstalledModsPacket::mods,
