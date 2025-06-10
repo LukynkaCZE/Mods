@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="097d3002-6cc1-4965-8bea-cf2f1fe2cad4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/cz/lukynka/mods/common/packet/InstalledModsPacket.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/cz/lukynka/mods/common/packet/InstalledModsPacket.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/cz/lukynka/mods/common/LukynkaMod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/cz/lukynka/mods/common/LukynkaMod.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/cz/lukynka/mods/common/ModRegistry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/cz/lukynka/mods/common/ModRegistry.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/kotlin/cz/lukynka/mods/common/packet/InstalledModsPacket.kt" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/kotlin/cz/lukynka/mods/common/protocol/InstalledModsPacket.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

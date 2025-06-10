@@ -1,6 +1,6 @@
 package cz.lukynka.mods.common
 
-import cz.lukynka.mods.common.packet.InstalledModsPacket
+import cz.lukynka.mods.common.protocol.InstalledModsPacket
 
 object ModRegistry {
 

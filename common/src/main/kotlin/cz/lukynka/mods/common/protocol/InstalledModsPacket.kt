@@ -1,4 +1,4 @@
-package cz.lukynka.mods.common.packet
+package cz.lukynka.mods.common.protocol
 
 import cz.lukynka.mods.common.LukynkaMod
 import net.minecraft.network.codec.ByteBufCodecs
@@ -8,7 +8,8 @@ import net.minecraft.resources.ResourceLocation
 
 class InstalledModsPacket(val mods: List<LukynkaMod>) : CustomPacketPayload {
     companion object {
-        val TYPE: CustomPacketPayload.Type<InstalledModsPacket> = CustomPacketPayload.Type<InstalledModsPacket>(ResourceLocation.fromNamespaceAndPath("lukynka", "installed_mods"))
+        val RESOURCE_LOCATION = ResourceLocation.fromNamespaceAndPath("lukynka", "installed_mods")
+        val TYPE: CustomPacketPayload.Type<InstalledModsPacket> = CustomPacketPayload.Type<InstalledModsPacket>(RESOURCE_LOCATION)
 
         val STREAM_CODEC = StreamCodec.composite(
             LukynkaMod.STREAM_CODEC.apply(ByteBufCodecs.list()), InstalledModsPacket::mods,
