@@ -7,8 +7,8 @@
     <list default="true" id="097d3002-6cc1-4965-8bea-cf2f1fe2cad4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +35,11 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Mods" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Mods" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -99,6 +104,7 @@
     "Gradle.Mods:common [processIncludeJars].executor": "Run",
     "Gradle.Mods:common [remapJar].executor": "Run",
     "Gradle.Mods:common [remapSourcesJar].executor": "Run",
+    "Gradle.Mods:common [runClient].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -125,7 +131,7 @@
       <recent name="cz.lukynka.mods.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Mods:common [processIncludeJars]">
+  <component name="RunManager" selected="Gradle.Mods:common [runClient]">
     <configuration name="Mods:common [downloadAssets]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -214,7 +220,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Mods:common [remapJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Mods:common [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/common" />
@@ -225,7 +231,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="remapJar" />
+            <option value="runClient" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -238,11 +244,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Mods:common [runClient]" />
         <item itemvalue="Gradle.Mods:common [processIncludeJars]" />
         <item itemvalue="Gradle.Mods:common [genSources]" />
         <item itemvalue="Gradle.Mods:common [downloadAssets]" />
         <item itemvalue="Gradle.Mods:common [migrateMappings]" />
-        <item itemvalue="Gradle.Mods:common [remapJar]" />
       </list>
     </recent_temporary>
   </component>
