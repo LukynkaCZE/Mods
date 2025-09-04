@@ -8,6 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/resources/common.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/common.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/fabric.mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +33,9 @@
         <task path="$PROJECT_DIR$/common">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/configsync">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -39,23 +46,18 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Mods" type="f1a62948:ProjectNode" />
+                <item name="configsync" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Mods" type="f1a62948:ProjectNode" />
+                <item name="configsync" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Mods" type="f1a62948:ProjectNode" />
-                <item name="common" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Mods" type="f1a62948:ProjectNode" />
-                <item name="common" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Mods" type="f1a62948:ProjectNode" />
-                <item name="common" type="2d1252cf:ModuleNode" />
+                <item name="configsync" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="fabric" type="c8890929:TasksNode$1" />
               </path>
@@ -69,8 +71,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Interface" />
         <option value="Kotlin Object" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -104,7 +108,8 @@
     "Gradle.Mods:common [processIncludeJars].executor": "Run",
     "Gradle.Mods:common [remapJar].executor": "Run",
     "Gradle.Mods:common [remapSourcesJar].executor": "Run",
-    "Gradle.Mods:common [runClient].executor": "Run",
+    "Gradle.Mods:common [runClient].executor": "Debug",
+    "Gradle.Mods:configsync [runClient].executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -112,7 +117,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JDK": "corretto-21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "E:/Coding/Java/Mods/common/src/main/resources",
+    "last_opened_file_path": "E:/Coding/Java/Mods/configsync/src/main/kotlin/cz/lukynka/mods/configsync/settings",
     "onboarding.tips.debug.path": "E:/Coding/Java/Mods/src/main/java/cz/lukynka/mods/Main.java"
   },
   "keyToStringList": {
@@ -123,6 +128,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Coding\Java\Mods\configsync\src\main\kotlin\cz\lukynka\mods\configsync\settings" />
+      <recent name="E:\Coding\Java\Mods" />
       <recent name="E:\Coding\Java\Mods\common\src\main\resources" />
       <recent name="E:\Coding\Java\Mods\common\src\main\java" />
       <recent name="E:\Coding\Java\Mods\gradle" />
@@ -131,7 +138,7 @@
       <recent name="cz.lukynka.mods.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Mods:common [runClient]">
+  <component name="RunManager" selected="Gradle.Mods:configsync [runClient]">
     <configuration name="Mods:common [downloadAssets]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -176,28 +183,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Mods:common [migrateMappings]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/common" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="migrateMappings" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="Mods:common [processIncludeJars]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -225,6 +210,28 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/common" />
         <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":common:runClient" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Mods:configsync [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/configsync" />
+        <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
@@ -242,13 +249,20 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Gradle.Mods:configsync [runClient]" />
+      <item itemvalue="Gradle.Mods:common [downloadAssets]" />
+      <item itemvalue="Gradle.Mods:common [genSources]" />
+      <item itemvalue="Gradle.Mods:common [processIncludeJars]" />
+      <item itemvalue="Gradle.Mods:common [runClient]" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Mods:configsync [runClient]" />
         <item itemvalue="Gradle.Mods:common [runClient]" />
         <item itemvalue="Gradle.Mods:common [processIncludeJars]" />
         <item itemvalue="Gradle.Mods:common [genSources]" />
         <item itemvalue="Gradle.Mods:common [downloadAssets]" />
-        <item itemvalue="Gradle.Mods:common [migrateMappings]" />
       </list>
     </recent_temporary>
   </component>

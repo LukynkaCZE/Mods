@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "config_sync",
+  "version": "1.0",
+  "name": "Config Sync",
+  "description": "Sync config and keybinds across all instances",
+  "authors": [
+    "LukynkaCZE"
+  ],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/testrrrr/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "cz.lukynka.mods.configsync.ConfigSyncMod"
+    ],
+    "modmenu": [
+      "cz.lukynka.mods.configsync.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "config_sync.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric-language-kotlin": "*",
+    "fabric": "*",
+    "minecraft": "*",
+    "yet_another_config_lib_v3": "*"
+  }
+}

@@ -15,6 +15,13 @@ subprojects {
 
     repositories {
         mavenCentral()
+        maven("https://maven.isxander.dev/releases") {
+            name = "Xander Maven"
+        }
+        maven("https://maven.terraformersmc.com/") {
+            name = "Terraformers"
+        }
+
     }
 }
 

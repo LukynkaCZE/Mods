@@ -12,6 +12,8 @@ val targetJavaVersion = 21
 
 repositories {
     mavenCentral()
+    maven("https://mvn.devos.one/releases")
+    maven("https://mvn.devos.one/snapshots")
 }
 
 base {
@@ -24,11 +26,15 @@ java {
 }
 
 dependencies {
+    modImplementation(project(":common"))
     minecraft(libs.minecraft)
     mappings(loom.officialMojangMappings())
 
     modImplementation(libs.bundles.fabric)
     modImplementation(libs.fabricLanguageKotlin)
+    implementation(libs.tide)
+    modImplementation(libs.yacl)
+    modImplementation(libs.modmenu)
 }
 
 tasks.processResources {

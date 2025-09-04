@@ -11,5 +11,5 @@ pluginManagement {
 
 rootProject.name = "Mods"
 include("common")
-include("better-saved-hotbars")
+include("configsync")
 
