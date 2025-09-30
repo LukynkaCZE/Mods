@@ -17,7 +17,7 @@ repositories {
 }
 
 base {
-    archivesName.set("common")
+    archivesName.set("config-sync")
 }
 
 java {
@@ -35,6 +35,9 @@ dependencies {
     implementation(libs.tide)
     modImplementation(libs.yacl)
     modImplementation(libs.modmenu)
+
+    include(project(":common"))
+    include(libs.tide)
 }
 
 tasks.processResources {

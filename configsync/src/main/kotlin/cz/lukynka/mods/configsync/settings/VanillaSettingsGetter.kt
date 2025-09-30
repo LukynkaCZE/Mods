@@ -1,5 +1,6 @@
 package cz.lukynka.mods.configsync.settings
 
+import cz.lukynka.mods.configsync.keybinds.Keybinds
 import net.minecraft.client.AttackIndicatorStatus
 import net.minecraft.client.CloudStatus
 import net.minecraft.client.Minecraft
@@ -14,6 +15,7 @@ object VanillaSettingsGetter {
 
     private val settings = Minecraft.getInstance().options
 
+
     fun get(): Settings {
         return Settings(
             fov = getFov(),
@@ -24,6 +26,7 @@ object VanillaSettingsGetter {
             chatSettings = getChatSettings(),
             accessibilitySettings = getAccessibilitySettings(),
             server = getServers(),
+            keybinds = Keybinds.get()
         )
     }
 

@@ -1,5 +1,6 @@
 package cz.lukynka.mods.configsync.settings
 
+import cz.lukynka.mods.configsync.keybinds.Keybinds
 import io.github.dockyardmc.tide.codec.Codec
 import io.github.dockyardmc.tide.codec.StructCodec
 
@@ -11,7 +12,8 @@ data class Settings(
     val musicAndSounds: MusicAndSounds,
     val chatSettings: ChatSettings,
     val accessibilitySettings: AccessibilitySettings,
-    val server: List<Server>
+    val server: List<Server>,
+    val keybinds: Keybinds,
 ) {
     companion object {
         val CODEC = StructCodec.of(
@@ -23,6 +25,7 @@ data class Settings(
             "chat_settings", ChatSettings.CODEC, Settings::chatSettings,
             "accessibility_settings", AccessibilitySettings.CODEC, Settings::accessibilitySettings,
             "server", Server.CODEC.list(), Settings::server,
+            "keybinds", Keybinds.CODEC, Settings::keybinds,
             ::Settings
         )
     }

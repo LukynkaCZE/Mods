@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="097d3002-6cc1-4965-8bea-cf2f1fe2cad4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/resources/common.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/common.mixins.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/fabric.mod.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configsync/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/configsync/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configsync/src/main/java/cz/lukynka/mods/configsync/mixin/OptionMixin.java" beforeDir="false" afterPath="$PROJECT_DIR$/configsync/src/main/java/cz/lukynka/mods/configsync/mixin/OptionsMixin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configsync/src/main/kotlin/cz/lukynka/mods/configsync/ConfigSyncMod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/configsync/src/main/kotlin/cz/lukynka/mods/configsync/ConfigSyncMod.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configsync/src/main/kotlin/cz/lukynka/mods/configsync/settings/Settings.kt" beforeDir="false" afterPath="$PROJECT_DIR$/configsync/src/main/kotlin/cz/lukynka/mods/configsync/settings/Settings.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configsync/src/main/kotlin/cz/lukynka/mods/configsync/settings/VanillaSettingsGetter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/configsync/src/main/kotlin/cz/lukynka/mods/configsync/settings/VanillaSettingsGetter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configsync/src/main/kotlin/cz/lukynka/mods/configsync/settings/VanillaSettingsSetter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/configsync/src/main/kotlin/cz/lukynka/mods/configsync/settings/VanillaSettingsSetter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configsync/src/main/resources/config_sync.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/configsync/src/main/resources/config_sync.mixins.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
                 <item name="Mods" type="f1a62948:ProjectNode" />
                 <item name="configsync" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="fabric" type="c8890929:TasksNode$1" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -73,8 +73,9 @@
       <list>
         <option value="Kotlin Interface" />
         <option value="Kotlin Object" />
-        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="Kotlin Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -109,6 +110,7 @@
     "Gradle.Mods:common [remapJar].executor": "Run",
     "Gradle.Mods:common [remapSourcesJar].executor": "Run",
     "Gradle.Mods:common [runClient].executor": "Debug",
+    "Gradle.Mods:configsync [build].executor": "Debug",
     "Gradle.Mods:configsync [runClient].executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -138,29 +140,7 @@
       <recent name="cz.lukynka.mods.common" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Mods:configsync [runClient]">
-    <configuration name="Mods:common [downloadAssets]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/common" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="downloadAssets" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.Mods:configsync [build]">
     <configuration name="Mods:common [genSources]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -227,6 +207,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="Mods:configsync [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/configsync" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="Mods:configsync [runClient]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -250,19 +252,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.Mods:configsync [runClient]" />
-      <item itemvalue="Gradle.Mods:common [downloadAssets]" />
+      <item itemvalue="Gradle.Mods:configsync [build]" />
       <item itemvalue="Gradle.Mods:common [genSources]" />
       <item itemvalue="Gradle.Mods:common [processIncludeJars]" />
       <item itemvalue="Gradle.Mods:common [runClient]" />
+      <item itemvalue="Gradle.Mods:configsync [runClient]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Mods:configsync [build]" />
         <item itemvalue="Gradle.Mods:configsync [runClient]" />
         <item itemvalue="Gradle.Mods:common [runClient]" />
         <item itemvalue="Gradle.Mods:common [processIncludeJars]" />
         <item itemvalue="Gradle.Mods:common [genSources]" />
-        <item itemvalue="Gradle.Mods:common [downloadAssets]" />
       </list>
     </recent_temporary>
   </component>

@@ -1,8 +1,10 @@
 package cz.lukynka.mods.configsync.settings
 
+import cz.lukynka.mods.configsync.keybinds.Keybinds
 import net.minecraft.client.AttackIndicatorStatus
 import net.minecraft.client.CloudStatus
 import net.minecraft.client.Minecraft
+import net.minecraft.client.Options
 import net.minecraft.client.multiplayer.ServerData
 import net.minecraft.client.multiplayer.ServerList
 import net.minecraft.sounds.SoundSource
@@ -12,9 +14,10 @@ import net.minecraft.world.entity.player.PlayerModelPart
 
 object VanillaSettingsSetter {
 
-    private val settings = Minecraft.getInstance().options
+    lateinit var settings: Options
 
-    fun set(settings: Settings) {
+    fun set(settings: Settings, options: Options) {
+        this.settings = options
         setAccessibilitySettings(settings.accessibilitySettings)
         setChatSettings(settings.chatSettings)
         setFov(settings.fov)
@@ -23,6 +26,9 @@ object VanillaSettingsSetter {
         setServers(settings.server)
         setSkinSettings(settings.skinCustomization)
         setVideoSettings(settings.videoSettings)
+        Keybinds.set(settings.keybinds)
+
+        Minecraft.getInstance().options.save()
     }
 
     fun setServers(servers: List<Server>) {
